@@ -30,7 +30,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: [Add live site URL here]([https://your-live-site-url.com](https://softpillow20.github.io/tip-calculator/))
+- Live Site URL: [Tip Calculator App](https://softpillow20.github.io/tip-calculator/)
 
 ## My process
 
