@@ -30,7 +30,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [Tip Calculator](https://softpillow20.github.io/tip-calculator/)
 
 ## My process
 
@@ -49,4 +49,4 @@ I will continue to write better and maybe readable code in the future but for no
 
 ## Author
 
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/SoftPillow20)
+- Frontend Mentor - [@SoftPillow20](https://www.frontendmentor.io/profile/SoftPillow20)
