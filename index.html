@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Tip calculator app</title>
+  </head>
+  <body>
+    <header class="container margin-bottom--l">
+      <h1 class="primary-header">SPLITTER</h1>
+    </header>
+    <main>
+      <div class="calculator grid grid--2-cols grid--gap-m">
+        <div class="calculator-input flex">
+          <div>
+            <div class="title-wrapper flex">
+              <label class="input-title" for="bill">Bill</label>
+              <span class="warning-pop-up warning-bill">Can't be zero</span>
+            </div>
+            <div class="placeholder--wrapper">
+              <input class="input-field bill" id="bill" type="number" />
+
+              <img class="placeholder currency" src="images/icon-dollar.svg" />
+              <span class="placeholder placeholder--bill default-num">0</span>
+            </div>
+          </div>
+          <div>
+            <p class="input-title">Select Tip %</p>
+            <div class="grid grid--6-cols">
+              <button class="btn five">5<span>%</span></button>
+              <button class="btn ten">10<span>%</span></button>
+              <button class="btn fifteen">15<span>%</span></button>
+              <button class="btn twenty-five">25<span>%</span></button>
+              <button class="btn fifty">50<span>%</span></button>
+              <div class="btn--wrapper">
+                <input
+                  class="input-field btn btn--custom"
+                  type="number"
+                  id="custom"
+                />
+                <span class="custom--position">Custom</span>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="title-wrapper flex">
+              <label class="input-title" for="people">Number of People</label>
+              <span class="warning-pop-up warning-people">Can't be zero</span>
+            </div>
+            <div class="placeholder--wrapper">
+              <input class="input-field people" id="people" type="number" />
+              <img class="placeholder currency" src="images/icon-person.svg" />
+              <span class="placeholder placeholder--people default-num">0</span>
+            </div>
+          </div>
+        </div>
+        <div class="calculator-display">
+          <div class="calculator-display-wrapper">
+            <div>
+              <div class="Tip-amount-details margin-bottom--s">
+                <div>
+                  <p class="tip-title">Tip Amount</p>
+                  <p class="per-person">/ person</p>
+                </div>
+                <div>
+                  <p class="amount">$<span class="tip">0.00</span></p>
+                </div>
+              </div>
+              <div class="Tip-amount-details">
+                <div>
+                  <p class="tip-title">Total</p>
+                  <p class="per-person">/ person</p>
+                </div>
+                <div>
+                  <p class="amount">$<span class="total">0.00</span></p>
+                </div>
+              </div>
+            </div>
+            <button type="button" class="btn--tip btn--default">RESET</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
