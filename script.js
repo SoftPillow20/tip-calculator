@@ -19,9 +19,6 @@ const peopleEl = document.querySelector(".people");
 const placeHolderBillEl = document.querySelector(".placeholder--bill");
 const placeHolderpeopleEl = document.querySelector(".placeholder--people");
 
-const emptyNum = new Array(10);
-const keyNum = Array.from(emptyNum, (num, i) => (num = i + 1) - 1);
-
 let tip;
 let billAmount;
 let numPeople;
@@ -87,22 +84,20 @@ function calculateTip(element) {
 // Function that does action if input field is active
 
 function inputFieldActive() {
-  keyNum.forEach((_, i) =>
-    inputFieldEl.forEach((el) =>
-      el.addEventListener("keydown", function (e) {
-        if (e.key === String(i) && el.getAttribute("id") === "bill") {
-          placeHolderBillEl.style.opacity = 0;
-          warningBillEl.style.opacity = 0;
-          billEl.style.outline = "2px solid hsl(172, 67%, 45%)";
-        } else if (e.key === String(i) && el.getAttribute("id") === "people") {
-          placeHolderpeopleEl.style.opacity = 0;
-          warningPeopleEl.style.opacity = 0;
-          peopleEl.style.outline = "2px solid hsl(172, 67%, 45%)";
-        } else if (e.key === String(i) && el.getAttribute("id") === "custom") {
-          customPositionEl.style.opacity = 0;
-        }
-      })
-    )
+  inputFieldEl.forEach((el) =>
+    el.addEventListener("input", function () {
+      if (el && el.getAttribute("id") === "bill") {
+        placeHolderBillEl.style.opacity = 0;
+        warningBillEl.style.opacity = 0;
+        billEl.style.outline = "2px solid hsl(172, 67%, 45%)";
+      } else if (el && el.getAttribute("id") === "people") {
+        placeHolderpeopleEl.style.opacity = 0;
+        warningPeopleEl.style.opacity = 0;
+        peopleEl.style.outline = "2px solid hsl(172, 67%, 45%)";
+      } else if (el && el.getAttribute("id") === "custom") {
+        customPositionEl.style.opacity = 0;
+      }
+    })
   );
 }
 
